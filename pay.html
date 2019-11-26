@@ -1,0 +1,30 @@
+<?php
+
+    use PayPal\Api\Payment;
+    use PayPal\Api\PaymentExecution;
+
+    require 'app/start.php';
+
+    if(!isset($_POST['success'], $_GET['paymentId'], $_GET['PayerID'])){
+        die();
+    }
+
+    if((bool)$_GET['success'] === false){
+        die();
+    }
+
+    $paymentId = $_GET['paymentId'];
+    $payerId = $_GET['PayerID'];
+
+    $payment = Payment::get($paymentId, $paypal);
+    $execution = new PaymentExecution();
+    $execution->setPayerID($payerId);
+
+    try{
+        $result = $payment->execution($execution, $paypal);
+    } catch(Exception $e){
+        die($e);
+    }
+
+
+?>

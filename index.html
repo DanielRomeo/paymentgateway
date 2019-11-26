@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>AccommodateUs</title>
+	<link rel="icon" href="images/logous.png">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        html, body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container #mainContainer{
+
+        }
+        #termsAndConditionsCard{
+            margin: 30px;
+        }
+        img{
+            max-width: 100px;
+            max-height: 100px;
+            padding: 0px;
+            margin-top: 0px;
+        }
+    
+        #cardImagesDiv >div{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        #bodyWhereButtonLays{
+            padding: 30px;
+        }
+        .card-footer{
+            padding: 0px;
+            background: white;
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <!--  -->
+
+    <div id="mainContainer" class="container">
+
+        <h1>Submit Your Payment</h1>
+
+        <hr/>
+
+        <div class="row"> <!-- row that holds the payment-->    
+
+            <div class="col-md-6"> <!-- col that holds the payments-->
+                <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" 
+                        aria-controls="pills-home" 
+                        aria-selected="true">Credit Card</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" 
+                        aria-controls="pills-profile" 
+                        aria-selected="false">EFT</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                        <div class="container">
+
+                            <div class="card">
+
+                                <div class="card-header">
+                                    Credit Card Payment
+                                </div>
+
+                               <div id="bodyWhereButtonLays" clas="card-body">
+
+                                <form action="xcheckout.php" method="post">
+                                    <p class="card-text">Amount Charged : R500</p>
+
+                                    <!-- <button class="btn btn-success" type="submit" name="submit" >PAY</button> -->
+                                    
+                                    <script src="https://www.paypal.com/sdk/js?client-id=AeFTN_qYrMOCMGVwVzz3jBZj8ppPl2AImjRZF-mJiFLKiBuEMeD-95_bOHXR0t4riyqkPfXMaxf9BJ-d">
+                                    </script>
+
+                                    <div id="paypal-button-container"></div>
+
+                                </form>
+
+                               </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- __________________________________________________________ -->
+
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                        <div class="container">
+                            
+                            <div class="card">
+
+                                <div class="card-header">
+                                EFT
+                                </div>
+
+                                <div style="font-size: 15px;" class="card-body">
+
+                                    <p class="card-title">Electronic Funds Transfer</p>
+
+                                    <p class="card-text">You may also choose to transfer the funds manually, electronically.</p>
+
+                                    <p class="card-text">Use the following information to make your payment, We have also sent the banking details to your email.</p>
+
+                                    <p class="card-text">The processing of the service can take up to 2 working days.</p>
+                                    <p class="card-text">Use your email as a payment reference.</p>
+
+                                    <hr/>
+                                    <p class="card-title"> <b>Banking details:</b> </p>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted"> <b>Bank: </b> </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted">FNB(First National Bank) </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted"> <b>Account Name: </b> </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted">AccommodateUs (PTY) Ltd </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted"> <b>Account Number: </b> </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted">6021225525 </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted"> <b>Account Type: </b> </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted">Business Current Account </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted"> <b>Branch code: </b> </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="card-text text-muted">051 000</p>
+                                        </div>
+                                    </div>
+
+                                    
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6"> <!-- div that displays the payments :-->
+
+                <div class="container">
+
+                    <div class="card">
+                        <div class="card-header">
+                            Payment Info | Summary of payment
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="card-text text-muted">Self Advirtisment of property</p>
+                                </div> 
+
+                                <div class="col-md-4 text-right">
+                                    <p class="card-text text-muted">R 1000</p>
+                                </div>
+                            </div>
+                            <hr/>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="card-title text-muted">Total</p>
+                                </div> 
+
+                                <div class="col-md-4 text-right">
+                                    <p class="card-text text-muted"> <b>R 3000</b> </p>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <p class="card-text text-muted" style="font-size: 13px;">  <i>*Inclusive of 15% VAT</i> </p>
+
+                        </div>
+
+                        <div class="card-footer">
+                            <!-- display the mastercard images -->
+                            <div id="cardImagesDiv" class="row">
+                                <div class="col-md-4">
+                                    <img src="images/mastercard.png" class="rounded mx-auto d-block" alt="...">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <img src="images/visa.png" class="rounded mx-auto d-block" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- end of row-->
+
+        <!--  end of first row ________________________________________________________ -->
+
+        <div class="row">
+            <!-- display: accept terms and conditions page: -->
+            <div class="container">
+
+                <div id="termsAndConditionsCard" class="card">
+
+                    <div class="card-body">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" id="termsCheckbox" name="termsCheckbox" aria-label="Checkbox for following text input">
+                                </div>
+                            </div>
+
+                            <p class="card-text"> &nbsp; &nbsp; I agree to the <a href="https://accommodateus.co.za/terms">terms and conditions</a>. </p>
+                            
+                        </div>
+
+                        
+
+
+                    </div>  
+                </div>
+
+                <div id="dangerBox" class="alert alert-danger" role="alert" >
+                    Please read the Terms and conditions before proceeding with payments
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#dangerBox').hide();
+            // check if check box has been checked or not:
+            $('input[type="checkbox"]').click(function(){
+                if( $(this).prop("checked") == true){
+                    $('#dangerBox').hide();
+                }
+                else if( $(this).prop("checked") == false){
+                    console.log("terms and conditions checkbox is ticked off");
+                    $('#dangerBox').show();
+
+                    //  and also disable the button to submit
+                }
+            });
+
+            // show and hide visa and mastercard images based on which tab they are on:
+            $('#pills-profile-tab').on('click', function(){
+                $('.card-footer').hide();   
+            });
+            $('#pills-home-tab').on('click', function(){
+                $('.card-footer').show();   
+            });
+        });
+
+
+
+        
+    </script>
+
+
+<script>
+  paypal.Buttons({
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '10.00'
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Transaction completed by ' + details.payer.name.given_name);
+        // Call your server to save the transaction
+        return fetch('/paypal-transaction-complete', {
+          method: 'post',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            orderID: data.orderID
+          })
+        });
+      });
+    }
+  }).render('#paypal-button-container');
+  </script>
+
+</body>
+</html>
